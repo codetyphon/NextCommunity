@@ -1,0 +1,42 @@
+[
+    {
+        "name": "superman",
+        "face": "/avatar/superman.jpg"
+    },
+    {
+        "name": "spiderrman",
+        "face": "/avatar/spiderman.jpg"
+    },
+    {
+        "name": "supermario",
+        "face": "/avatar/supermario.jpg"
+    },
+    {
+        "name": "alien",
+        "face": "/avatar/alien.jpg"
+    },
+    {
+        "name": "batman",
+        "face": "/avatar/batman.jpg"
+    },
+    {
+        "name": "dino",
+        "face": "/avatar/dino.jpg"
+    },
+    {
+        "name": "peppa",
+        "face": "/avatar/peppa.jpg"
+    },
+    {
+        "name": "韩梅梅",
+        "face": "/avatar/hanmeimei.jpg"
+    },
+    {
+        "name": "BigHero",
+        "face": "/avatar/bighero.jpg"
+    },
+    {
+        "name": "fox",
+        "face": "/avatar/fox.jpg"
+    }
+]
