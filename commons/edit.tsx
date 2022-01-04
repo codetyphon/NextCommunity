@@ -1,3 +1,4 @@
+import { message } from "antd";
 import { Button, Form, Input } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import React, { useState } from "react";
@@ -41,7 +42,19 @@ const Editor = ({ onSubmit, submitting, buttonTitle, showTitle }: {
             </Form.Item>
             <Form.Item>
                 <Button htmlType="submit" loading={submitting} onClick={() => {
-                    onSubmit(Object.assign({ time: Date.now() }, { text: text }, { author: user }, showTitle ? { title: title } : {}))
+                    if (showTitle) {
+                        if (title.length === 0) {
+                            message.error("title cannot be null or empty")
+                            return false
+                        }
+                    }
+                    if (text.length === 0) {
+                        message.error("content cannot be null or empty")
+                        return false
+                    }
+                    onSubmit(Object.assign({ time: Date.now() }, { text: text }, { author: { name: user.name, face: user.face } }, showTitle ? { title: title } : {}))
+                    setTitle("")
+                    setText("")
                 }} type="primary">{buttonTitle}</Button>
             </Form.Item>
         </>)

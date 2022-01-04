@@ -48,9 +48,9 @@ export default function Home() {
                 title={<a href={`/topic/${item?._id}`}>{item?.title}</a>}
                 description={<p>by {item?.author?.name} {moment(item?.time).format("YYYY-MM-DD HH:MM")}</p>}
               />
-              <div>
+              <a href={`/topic/${item?._id}`}>
                 <Badge size="default" count={item?.numOfreplys || 0}><MessageOutlined style={{ fontSize: '28px' }} /></Badge>
-              </div>
+              </a>
             </List.Item>
           )} />
       </Card>
